@@ -5,27 +5,30 @@ window.onload=function () {
         if (window.orientation == 0 ) {
             $("body").attr("class", "portrait");
             orientation = 'portrait';
+            alert(0)
             return false;
         }
         else if (window.orientation == 90 ) {
-            $("body").css({
-                    'transform': null,
-                    '-ms-transform': null,
-                    '-moz-transform': null,
-                    '-webkit-transform': null,
-                    ' -o-transform': null
-                }
-            ).css({
-                'transform':'rotate(-90deg)',
-                '-ms-transform':'rotate(-90deg)',
-                '-moz-transform':'rotate(-90deg)',
-                '-webkit-transform':'rotate(-90deg)',
-                ' -o-transform':'rotate(-90deg)'
-            });
+            alert(1)
+            // $("body").css({
+            //         'transform': null,
+            //         '-ms-transform': null,
+            //         '-moz-transform': null,
+            //         '-webkit-transform': null,
+            //         ' -o-transform': null
+            //     }
+            // ).css({
+            //     'transform':'rotate(-90deg)',
+            //     '-ms-transform':'rotate(-90deg)',
+            //     '-moz-transform':'rotate(-90deg)',
+            //     '-webkit-transform':'rotate(-90deg)',
+            //     ' -o-transform':'rotate(-90deg)'
+            // });
 
             return false;
         }
         else if(window.orientation == -90){
+            alert(-1)
             $("body").css({
                     'transform': null,
                     '-ms-transform': null,
