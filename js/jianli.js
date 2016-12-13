@@ -3,6 +3,7 @@ window.onload=function () {
     function orient() {
         //alert('gete');
         if (window.orientation == 0 ) {
+            alert(0);
             $("body").css({
                     'transform': null,
                     '-ms-transform': null,
@@ -20,7 +21,7 @@ window.onload=function () {
             return false;
         }
         else if (window.orientation == 90 ) {
-            alert(1)
+            alert(90);
             $("body").css({
                     'transform': null,
                     '-ms-transform': null,
@@ -39,7 +40,7 @@ window.onload=function () {
             return false;
         }
         else if(window.orientation == -90){
-            alert(-1)
+            alert(-90);
             $("body").css({
                     'transform': null,
                     '-ms-transform': null,
@@ -117,4 +118,4 @@ window.onload=function () {
             });
         }
     });
-}
+};
