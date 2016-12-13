@@ -3,27 +3,38 @@ window.onload=function () {
     function orient() {
         //alert('gete');
         if (window.orientation == 0 ) {
-            $("body").attr("class", "portrait");
-            orientation = 'portrait';
-            alert(0)
+            $("body").css({
+                    'transform': null,
+                    '-ms-transform': null,
+                    '-moz-transform': null,
+                    '-webkit-transform': null,
+                    ' -o-transform': null
+                }
+            ).css({
+                'transform':'rotate(0deg)',
+                '-ms-transform':'rotate(0deg)',
+                '-moz-transform':'rotate(0deg)',
+                '-webkit-transform':'rotate(0deg)',
+                ' -o-transform':'rotate(0deg)'
+            });
             return false;
         }
         else if (window.orientation == 90 ) {
             alert(1)
-            // $("body").css({
-            //         'transform': null,
-            //         '-ms-transform': null,
-            //         '-moz-transform': null,
-            //         '-webkit-transform': null,
-            //         ' -o-transform': null
-            //     }
-            // ).css({
-            //     'transform':'rotate(-90deg)',
-            //     '-ms-transform':'rotate(-90deg)',
-            //     '-moz-transform':'rotate(-90deg)',
-            //     '-webkit-transform':'rotate(-90deg)',
-            //     ' -o-transform':'rotate(-90deg)'
-            // });
+            $("body").css({
+                    'transform': null,
+                    '-ms-transform': null,
+                    '-moz-transform': null,
+                    '-webkit-transform': null,
+                    ' -o-transform': null
+                }
+            ).css({
+                'transform':'rotate(-90deg)',
+                '-ms-transform':'rotate(-90deg)',
+                '-moz-transform':'rotate(-90deg)',
+                '-webkit-transform':'rotate(-90deg)',
+                ' -o-transform':'rotate(-90deg)'
+            });
 
             return false;
         }
