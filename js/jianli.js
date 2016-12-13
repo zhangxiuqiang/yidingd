@@ -2,20 +2,54 @@ window.onload=function () {
 
     function orient() {
         //alert('gete');
-        if (window.orientation == 0 || window.orientation == 180) {
+        if (window.orientation == 0 ) {
             $("body").attr("class", "portrait");
             orientation = 'portrait';
             return false;
         }
-        else if (window.orientation == 90 || window.orientation == -90) {
-            $("body").attr("class", "portrait");
-            orientation = 'portrait';
+        else if (window.orientation == 90 ) {
+            $("body").css({
+                    'transform': null,
+                    '-ms-transform': null,
+                    '-moz-transform': null,
+                    '-webkit-transform': null,
+                    ' -o-transform': null
+                }
+            ).css({
+                'transform':'rotate(-90deg)',
+                '-ms-transform':'rotate(-90deg)',
+                '-moz-transform':'rotate(-90deg)',
+                '-webkit-transform':'rotate(-90deg)',
+                ' -o-transform':'rotate(-90deg)'
+            });
 
             return false;
+        }
+        else if(window.orientation == -90){
+            $("body").css({
+                    'transform': null,
+                    '-ms-transform': null,
+                    '-moz-transform': null,
+                    '-webkit-transform': null,
+                    ' -o-transform': null
+                }
+            ).css({
+                'transform':'rotate(90deg)',
+                '-ms-transform':'rotate(90deg)',
+                '-moz-transform':'rotate(90deg)',
+                '-webkit-transform':'rotate(90deg)',
+                ' -o-transform':'rotate(90deg)'
+            });
         }
     }
-
-
+    //
+    //    :; /* Internet Explorer */
+    //    ; /* Firefox */
+    //    ; /* Safari 和 Chrome */
+    //    ; /* Opera */
+    // }
+    // || window.orientation == -90
+    // || window.orientation == 180
     $(function () {
         orient();
     });
